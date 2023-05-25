@@ -63,6 +63,10 @@
         cursor: pointer;
         color: $grey-4;
       }
+      img {
+        width: 22px;
+        height: 28px;
+      }
     }
   }
 }
@@ -191,6 +195,10 @@
         &:hover {
           cursor: pointer;
           color: $grey-4;
+        }
+        img {
+          width: 18px;
+          height: 24px;
         }
       }
     }
