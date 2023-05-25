@@ -8,16 +8,43 @@ function Header() {
   const [active, setActive] = useState(false);
   const menuIcon = "menuIcon";
   return (
-    <div className="header-wraper">
+    <div className="header-wrapper">
       <Link className="logo" to="/">
         <BoltLogo />
       </Link>
       <div className="menu">
         <nav className={`navigation ${active ? menuIcon : ""}`}>
-          <Link to="/generate">Generate QR Codes</Link>
-          <Link to="/pricing">Pricing</Link>
-          <Link to="/login">Log in</Link>
-          <Link to="/signup" className="transp-btn">
+          <Link
+            to="/generate"
+            onClick={() => {
+              setActive(!active);
+            }}
+          >
+            Generate QR Codes
+          </Link>
+          <Link
+            to="/pricing"
+            onClick={() => {
+              setActive(!active);
+            }}
+          >
+            Pricing
+          </Link>
+          <Link
+            to="/login"
+            onClick={() => {
+              setActive(!active);
+            }}
+          >
+            Log in
+          </Link>
+          <Link
+            to="/signup"
+            onClick={() => {
+              setActive(!active);
+            }}
+            className="transp-btn"
+          >
             Sign up
           </Link>
         </nav>

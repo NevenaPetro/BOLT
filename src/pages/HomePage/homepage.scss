@@ -1,9 +1,10 @@
 @import "../../style.scss";
 
-.homepage-wraper {
+.homepage-wrapper {
   display: flex;
   justify-content: space-between;
   margin: 206px 105px 51px 40px;
+  
   .heading {
     margin-top: 80px;
     width: 547px;
@@ -67,7 +68,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .homepage-wraper {
+  .homepage-wrapper {
     display: flex;
     justify-content: space-between;
     margin: 155px 62px 43px 24px;
@@ -103,7 +104,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .homepage-wraper {
+  .homepage-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -121,8 +122,6 @@
 
       .big-btn {
         margin: 8px 0;
-        a {
-        }
       }
     }
     img {

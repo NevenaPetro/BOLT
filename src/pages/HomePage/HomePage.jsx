@@ -5,7 +5,7 @@ import "../HomePage/homepage.scss";
 
 function HomePage() {
   return (
-    <div className="homepage-wraper">
+    <div className="homepage-wrapper">
       <div>
         <div className="heading">
           <h2>
@@ -23,7 +23,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <img src={QRCodePurchase} alt="image" />
+      <img  src={QRCodePurchase} alt="image" />
     </div>
   );
 }
