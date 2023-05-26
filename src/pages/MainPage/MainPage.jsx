@@ -1,7 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import QRCodePurchase from "../../assets/home/qr-code-purchase.png";
-import DynamicIcon from '../../assets/home/static-and-dynamic/dynamic-icon.svg'
+import DynamicIcon from "../../assets/home/static-and-dynamic/dynamic-icon-orange.svg";
+import StaticIcon from "../../assets/home/static-and-dynamic/static-icon-orange.svg";
+import FeaturesIcon from "../../assets/home/features/features-icon-orange.svg";
+import CryptoIcon from "../../assets/home/qr code types icons/crypto-orange.svg";
+import EmailIcon from "../../assets/home/qr code types icons/email-orange.svg";
+import EventIcon from "../../assets/home/qr code types icons/event-orange.svg";
+import FaceTimeIcon from "../../assets/home/qr code types icons/facetime-orange.svg";
+import LocationIcon from "../../assets/home/qr code types icons/location-orange.svg";
+import PayPalIcon from "../../assets/home/qr code types icons/paypal-orange.svg";
+import PhoneIcon from "../../assets/home/qr code types icons/phone-orange.svg";
+import SmsIcon from "../../assets/home/qr code types icons/sms-orange.svg";
+import TextIcon from "../../assets/home/qr code types icons/text-orange.svg";
+import UrlIcon from "../../assets/home/qr code types icons/url-orange.svg";
+import VCardIcon from "../../assets/home/qr code types icons/vcard-orange.svg";
+import WhatsAppIcon from "../../assets/home/qr code types icons/whatsapp-orange.svg";
+import WiFiIcon from "../../assets/home/qr code types icons/wifi-orange.svg";
+
 import "./mainpage.scss";
 
 function HomePage() {
@@ -46,11 +62,14 @@ function HomePage() {
               allowFullScreen
             ></iframe>
             <div>
-              <img src={DynamicIcon} alt="dynamic"  fill='$orange-3' />
-              <h5>Dynamic QR codes</h5>
+              <h5>
+                <span>
+                  <img src={DynamicIcon} alt="dynamic" />
+                </span>
+                Dynamic QR codes
+              </h5>
               <p>
                 Have you ever wanted to change the destination of your QR code?
-                <br></br>
                 <br></br>
                 If your answer is yes, Dynamic QR codes are perfect for you.
                 They allow you to change the destination of the QR code
@@ -67,15 +86,21 @@ function HomePage() {
               </ul>
             </div>
           </div>
-          <div className="generate-sub-wrapper">
+          <div className="generate-sub-wrapper second">
             <div>
-              <h5>Static QR codes</h5>
+              <h5>
+                <span>
+                  <img src={StaticIcon} alt="static" />
+                </span>
+                Static QR codes
+              </h5>
               <p>
                 Ful customizable QR codes are something you will definitely need
-                for your company. <br></br><br></br>Static QR codes have no scan limit,
-                also they are fixed, meaning that all the data is directly
-                embedded into the QR code. Once generated and printed for
-                real-world usage, it can't be changed.
+                for your company. <br></br>
+                <br></br>Static QR codes have no scan limit, also they are
+                fixed, meaning that all the data is directly embedded into the
+                QR code. Once generated and printed for real-world usage, it
+                can't be changed.
               </p>
               <ul>
                 <li>Fully customizable</li>
@@ -92,6 +117,204 @@ function HomePage() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             ></iframe>
+          </div>
+        </div>
+      </section>
+      <section className="features">
+        <h4>With other features.</h4>
+        <p>
+          From QR code templates to custom domains, Bolt offers you all the
+          features that you might need.
+        </p>
+        <div className="features-wrapper">
+          <div className="features-sub-wrapper">
+            <img src={FeaturesIcon} alt="features" />
+            <div className="features-sub-sub-wrapper">
+              <h6>QR templates</h6>
+              <p>
+                You get 13 built-in QR code templates to get you started right
+                away.
+              </p>
+            </div>
+          </div>
+          <div className="features-sub-wrapper">
+            <img src={FeaturesIcon} alt="features" />
+            <div className="features-sub-sub-wrapper">
+              <h6>Privacy</h6>
+              <p>
+                We do not store any data of your created QR codes, except the
+                ones that you save in your account willingly.
+              </p>
+            </div>
+          </div>
+          <div className="features-sub-wrapper">
+            <img src={FeaturesIcon} alt="features" />
+            <div className="features-sub-sub-wrapper">
+              <h6>Highly customizable</h6>
+              <p>
+                Create the QR code you need, brand it with your own colors &
+                logo.
+              </p>
+            </div>
+          </div>
+          <div className="features-sub-wrapper">
+            <img src={FeaturesIcon} alt="features" />
+            <div className="features-sub-sub-wrapper">
+              <h6>Tracking pixels</h6>
+              <p>
+                Facebook, Google Analytics, Google Tag Manager, LinkedIn,
+                Pinterest, Twitter, Quora tracking pixels available.
+              </p>
+            </div>
+          </div>
+          <div className="features-sub-wrapper">
+            <img src={FeaturesIcon} alt="features" />
+            <div className="features-sub-sub-wrapper">
+              <h6>Projects </h6>
+              <p>Easiest way to categorize your managed resources.</p>
+            </div>
+          </div>
+          <div className="features-sub-wrapper">
+            <img src={FeaturesIcon} alt="features" />
+            <div className="features-sub-sub-wrapper">
+              <h6>Custom domains </h6>
+              <p>Connect your own domain or use our predefined ones.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="qr-code-types">
+        <h4>QR code types.</h4>
+        <p>
+          QR codes can be used for multiple purposes! So here you have a large
+          array of QR code templates to choose from and get started.
+        </p>
+        <div className="qr-code-types-wrapper">
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={TextIcon} alt="text" />
+              </span>
+              Text
+            </h6>
+            <p>Generate easy & customizable Text QR codes in minutes.</p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={UrlIcon} alt="url" />
+              </span>
+              URL
+            </h6>
+            <p>Generate easy & customizable Text QR codes in minutes.</p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={PhoneIcon} alt="phone" />
+              </span>
+              Phone
+            </h6>
+            <p>Get calls from people by scaning the QR code</p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={SmsIcon} alt="sms" />
+              </span>
+              SMS
+            </h6>
+            <p>Get custom SMS from people by scaning the QR code</p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={EmailIcon} alt="email" />
+              </span>
+              Email
+            </h6>
+            <p>Get custom email from people by scaning the QR code</p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={WhatsAppIcon} alt="whatsapp" />
+              </span>
+              Whatsapp
+            </h6>
+            <p>
+              Get custom Whatsapp messages from people by scaning the QR code
+            </p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={FaceTimeIcon} alt="facetime" />
+              </span>
+              Facetime
+            </h6>
+            <p>Get Facetime calls from people by scaning the QR code</p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={LocationIcon} alt="location" />
+              </span>
+              Location
+            </h6>
+            <p>
+              Embed location coordinates for people to get directions more
+              easily
+            </p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={WiFiIcon} alt="wifi" />
+              </span>
+              WiFi
+            </h6>
+            <p>
+              Create WiFi QR codes and let people conect to your WiFi more easly
+            </p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={EventIcon} alt="event" />
+              </span>
+              Event
+            </h6>
+            <p>
+              Generate a custom life calendar event and embed it into a QR code{" "}
+            </p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={CryptoIcon} alt="crypto" />
+              </span>
+              Crypto
+            </h6>
+            <p>Get paid in crypto from people by scaning the QR code</p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={VCardIcon} alt="vcard" />
+              </span>
+              Vcard
+            </h6>
+            <p>Embed your contact data into a digital bussines card</p>
+          </div>
+          <div className="qr-code-types-sub-wrapper">
+            <h6>
+              <span>
+                <img src={PayPalIcon} alt="paypal" />
+              </span>
+              PayPal
+            </h6>
+            <p>Create PayPal direct payment links</p>
           </div>
         </div>
       </section>

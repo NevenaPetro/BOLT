@@ -1,11 +1,20 @@
 @import "../../style.scss";
-.header-wrapper
-.header-sub-wrapper {
-  position: absolute;
+.footer-wrapper {
+  display: flex;
+
   width: 100%;
-  height: 197px;
-  left: 0px;
-  bottom: 0px;
-  background: $white;
-  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1);
+  
+  .footer-sub-wrapper {
+    
+    width: 1064px;
+    height: 197px;
+    
+    background: $white;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1);
+  }
+  .footer-wrapper-grey {
+    width: 376px;
+    height: 197px;
+    background: $grey-2;
+  }
 }
