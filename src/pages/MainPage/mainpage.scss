@@ -1,16 +1,15 @@
 @import "../../style.scss";
 
-.homepage-wrapper {
+.mainpage-wrapper {
   display: flex;
   justify-content: space-between;
   margin: 206px 105px 51px 40px;
-  
+
   .heading {
     margin-top: 80px;
     width: 547px;
     h2 {
-      font-style: normal;
-      font-weight: 900;
+      font-family: "TarabaFont-ExtraBold";
       font-size: 68.66px;
       line-height: 83px;
       color: $orange-3;
@@ -66,9 +65,85 @@
     height: 600px;
   }
 }
-
+.generate {
+  .generate-wrapper {
+    height: 1155px;
+    background-color: $grey-2;
+    padding: 46px 43px 17px 42px;
+    h4 {
+      font-size: 43.95px;
+      line-height: 53px;
+      font-family: "TarabaFont-ExtraBold";
+      margin-bottom: 16px;
+    }
+    p {
+      width: 509px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: $black-3;
+      margin-bottom: 47px;
+    }
+    .generate-sub-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+      margin-bottom: 73px;
+      iframe {
+        width: 660px;
+        height: 393px;
+        border-radius: 15px;
+        
+      }
+      img {
+        fill: $orange-3;
+      }
+      h5 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 35.16px;
+        line-height: 43px;
+        margin-bottom: 8px;
+      }
+      p {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: $black-3;
+        width: 546px;
+        height: 136px;
+        margin-bottom: 8px;
+      }
+      li {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: $black-3;
+        margin: 8px 0;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        li::before {
+          content: url("../../assets/home/validation-icon-orange.svg");
+          display: inline-block;
+          margin-right: 5px;
+          transform: scale(0.75);
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 1024px) {
-  .homepage-wrapper {
+  .mainpage-wrapper {
     display: flex;
     justify-content: space-between;
     margin: 155px 62px 43px 24px;
@@ -104,13 +179,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .homepage-wrapper {
+  .mainpage-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     margin: 102px 8px 0 8px;
     .heading {
-        width: 344px;
+      width: 344px;
       p {
         margin: 8px 100px 24px 0;
       }

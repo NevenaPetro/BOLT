@@ -1,7 +1,5 @@
 import Header from './components/header/Header';
-import HomePage from '../src/pages/HomePage/HomePage'
-import GeneratePage from '../src/pages/GeneratePage/GeneratePage'
-import PricingPage from '../src/pages/PricingPage/PricingPage'
+import MainPage from './pages/MainPage/MainPage'
 import LogInPage from '../src/pages/LogInPage/LogInPage'
 import SignUpPage from '../src/pages/SignUpPage/SignUpPage'
 import LostPasswordPage from '../src/pages/LostPasswordPage/LostPasswordPage'
@@ -16,9 +14,7 @@ function App() {
     <div >
       <Header />
       <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route path="/generate" element={<GeneratePage />} />
-          <Route path="/pricing" element={<PricingPage />} />
+          <Route exact path="/" element={<MainPage />} />
           <Route path="/login" element={<LogInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/lostpassword" element={<LostPasswordPage />} />
