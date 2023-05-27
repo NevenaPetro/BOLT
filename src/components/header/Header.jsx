@@ -14,22 +14,22 @@ function Header() {
       </Link>
       <div className="menu">
         <nav className={`navigation ${active ? menuIcon : ""}`}>
-          <Link
-            to="/generate"
+          <a
+            href="#generate"
             onClick={() => {
               setActive(!active);
             }}
           >
             Generate QR Codes
-          </Link>
-          <Link
-            to="/pricing"
+          </a>
+          <a
+            href="#pricing"
             onClick={() => {
               setActive(!active);
             }}
           >
             Pricing
-          </Link>
+          </a>
           <Link
             to="/login"
             onClick={() => {

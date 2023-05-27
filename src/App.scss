@@ -20,3 +20,10 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: white;
+    color: black;
+  }
+}

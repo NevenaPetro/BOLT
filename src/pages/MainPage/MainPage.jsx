@@ -44,7 +44,7 @@ function HomePage() {
         <img src={QRCodePurchase} alt="image" />
       </div>
 
-      <section className="generate">
+      <section id="generate">
         <div className="generate-wrapper">
           <h4>QR code Generator.</h4>
           <p>
@@ -120,7 +120,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section className="features">
+      <section id="features">
         <h4>With other features.</h4>
         <p>
           From QR code templates to custom domains, Bolt offers you all the
@@ -183,7 +183,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section className="qr-code-types">
+      <section id="qr-code-types">
         <h4>QR code types.</h4>
         <p>
           QR codes can be used for multiple purposes! So here you have a large
@@ -315,6 +315,100 @@ function HomePage() {
               PayPal
             </h6>
             <p>Create PayPal direct payment links</p>
+          </div>
+        </div>
+      </section>
+      <section id="pricing">
+        <div className="pricing-wrapper-one">
+          <div>
+            <h4>Simple, transparent pricing.</h4>
+            <p>
+              Not sure if you need Bolt? You can sign up for your free guest
+              account to try Bolt out.
+              <br /> <br /> If you decide that Bolt could be useful and that you
+              need something more advanced choose the plan that is right for you
+              and your budget.
+            </p>
+          </div>
+          <div className="big-btn-period">
+            <button>Monthly</button>
+            <button>Annual</button>
+            <button>Lifetime</button>
+          </div>
+        </div>
+
+        <div className="pricing-wrapper-two">
+          <div className="pricing-orange-gradient">
+            <p>GUEST</p>
+            <h4>Free</h4>
+            <p>4 QR code types </p>
+            <p className="strikethrough">4 QR code types</p>
+            <p className="strikethrough">4 QR code types</p>
+            <p className="strikethrough">4 QR code types</p>
+            <p className="strikethrough">4 QR code types</p>
+            <p className="strikethrough">4 QR code types</p>
+            <p className="strikethrough">4 QR code types</p>
+            <p className="strikethrough">4 QR code types</p>
+            <p className="strikethrough">4 QR code types</p>
+            <p className="strikethrough">4 QR code types</p>
+            <p className="strikethrough">4 QR code types</p>
+            <p className="strikethrough">4 QR code types</p>
+            <button className="big-btn">Choose plan</button>
+          </div>
+          <div className="pricing-orange-gradient">
+            <p>FREE with registration</p>
+            <h4>Free</h4>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <button className="big-btn">Choose plan</button>
+          </div>
+          <div className="most-popular">
+            <div className="most-popular-tab">Most popular plan</div>
+            <div className="pricing-orange-gradient dark">
+              <p>PERSONAL PRO</p>
+              <h4>$5</h4>
+              <p>4 QR code types </p>
+              <p>4 QR code types </p>
+              <p>4 QR code types </p>
+              <p>4 QR code types </p>
+              <p>4 QR code types </p>
+              <p>4 QR code types </p>
+              <p>4 QR code types </p>
+              <p>4 QR code types </p>
+              <p>4 QR code types </p>
+              <p>4 QR code types </p>
+              <p>4 QR code types </p>
+              <p>4 QR code types </p>
+              <button className="big-btn">Choose plan</button>
+            </div>
+          </div>
+
+          <div className="pricing-orange-gradient">
+            <p>BUSINESS</p>
+            <h4>$15</h4>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <p>4 QR code types </p>
+            <button className="big-btn">Choose plan</button>
           </div>
         </div>
       </section>
