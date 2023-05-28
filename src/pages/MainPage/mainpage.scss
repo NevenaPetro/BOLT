@@ -1,7 +1,6 @@
 @import "../../style.scss";
 
-.mainpage-wrapper {
-
+#mainpage-wrapper {
   display: flex;
   justify-content: space-between;
   margin: 206px 105px 51px 40px;
@@ -66,7 +65,6 @@
   }
 }
 #generate {
-  
   .generate-wrapper {
     height: 1155px;
     background-color: $grey-2-op;
@@ -365,7 +363,7 @@
         line-height: 19px;
         color: $black-3;
       }
-      .dark {
+      .mp {
         position: relative;
 
         margin-top: 50px;
@@ -397,7 +395,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .mainpage-wrapper {
+  #mainpage-wrapper {
     display: flex;
     justify-content: space-between;
     margin: 155px 62px 43px 24px;
@@ -616,7 +614,7 @@
           width: 211px;
           height: 51px;
         }
-        .dark {
+        .mp {
           position: relative;
 
           margin-top: 40px;
@@ -643,7 +641,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .mainpage-wrapper {
+  #mainpage-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -756,6 +754,32 @@
         p {
           width: 154px;
         }
+      }
+    }
+  }
+  #pricing {
+    padding: 26px 8px 0 8px;
+    .pricing-wrapper-one {
+      flex-direction: column;
+      p {
+        margin-bottom: 25px;
+      }
+      .big-btn-period {
+        justify-content: space-between;
+        button {
+          width: 104px;
+          margin: 0;
+        }
+      }
+    }
+
+    .pricing-wrapper-two {
+      padding: 38px 0 0 0;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+
+      .pricing-orange-gradient {
+        margin: 0 8px;
       }
     }
   }

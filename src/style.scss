@@ -1,20 +1,27 @@
-$orange-1: #ff7800;
-$orange-2: rgb(255, 207, 155, 0.1);
-$orange-3: #ffa039;
-$orange-4: #faf5f0;
-
-$white: #ffffff;
 
 
-$grey-2-op: rgba(215, 215, 215, 0.2);
-$grey-2: rgb(215, 215, 215);
-$grey-3: rgb(215, 215, 215, 0.3);
-$grey-4: #fafafa;
+    $orange-1: #ff7800;
+    $orange-2: rgb(255, 207, 155, 0.1);
+    $orange-3: #ffa039;
+    $orange-4: #faf5f0;
+    
+    $white: #ffffff;
+    
+    
+    $grey-2-op: rgba(215, 215, 215, 0.2);
+    $grey-2: rgb(215, 215, 215);
+    $grey-3: rgb(215, 215, 215, 0.3);
+    $grey-4: #fafafa;
+    
+    
+    
+    $black-0: #000000;
+    $black-1: #2e2e2e;
+    $black-2: #2d2d2d;
+    $black-3: #666666;
+    $black-4: #999898;
 
+body.dark {
+    $grey-2-op: rgb(102, 102, 102, 0.2);
+}
 
-
-$black-0: #000000;
-$black-1: #2e2e2e;
-$black-2: #2d2d2d;
-$black-3: #666666;
-$black-4: #999898;

@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import { applicationContext } from "../../context";
 import "../footer/footer.scss";
 import FacebookIcon from "../../assets/footer/facebook-large.svg";
 import InstagramIcon from "../../assets/footer/instagram-large.svg";
@@ -12,6 +13,8 @@ import TechLogo from "../../assets/footer/trb-tech-logo-solid-white (1) 1.svg";
 import YouTubeIcon from "../../assets/footer/you-tube-large.svg";
 
 function Footer() {
+  const { handleClickGenerate, handleClickHome, handleClickPricing } =
+    useContext(applicationContext);
   return (
     <div className="footer-wrapper">
       <div className="footer-sub-wrapper">
@@ -33,13 +36,15 @@ function Footer() {
               </Link>
             </div>
           </div>
-          <p className="copyright">Copyright © 2021 Taraba. All rights reserved.</p>{" "}
+          <p className="copyright">
+            Copyright © 2021 Taraba. All rights reserved.
+          </p>{" "}
         </div>
         <div className="footer-sub-sub-wrapper">
           <h6>Quick links</h6>
           <div className="quick-links">
-            <Link>Generate QR codes</Link>
-            <Link>Pricing</Link>
+            <Link onClick={handleClickGenerate}>Generate QR codes</Link>
+            <Link onClick={handleClickPricing}>Pricing</Link>
           </div>
           <div>
             <Link>Terms and Conditions</Link>

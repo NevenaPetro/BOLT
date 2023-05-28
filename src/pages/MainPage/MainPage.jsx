@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+
 import QRCodePurchase from "../../assets/home/qr-code-purchase.png";
 import DynamicIcon from "../../assets/home/static-and-dynamic/dynamic-icon-orange.svg";
 import StaticIcon from "../../assets/home/static-and-dynamic/static-icon-orange.svg";
@@ -17,13 +18,15 @@ import UrlIcon from "../../assets/home/qr code types icons/url-orange.svg";
 import VCardIcon from "../../assets/home/qr code types icons/vcard-orange.svg";
 import WhatsAppIcon from "../../assets/home/qr code types icons/whatsapp-orange.svg";
 import WiFiIcon from "../../assets/home/qr code types icons/wifi-orange.svg";
-
+import { applicationContext } from "../../context";
 import "./mainpage.scss";
 
 function HomePage() {
+  const { handleClickGenerate, handleClickHome, handleClickPricing } =
+    useContext(applicationContext);
   return (
     <>
-      <div className="mainpage-wrapper">
+      <div id="mainpage-wrapper">
         <div>
           <div className="heading">
             <h2>
@@ -34,7 +37,7 @@ function HomePage() {
           </div>
           <div className="big-btns">
             <div className="big-btn">
-              <Link to="/generate">Generate QR Codes</Link>
+              <Link to="/#generate" onClick={handleClickGenerate}>Generate QR Codes</Link>
             </div>
             <div className="big-btn">
               <Link to="/signup">Sign up</Link>
@@ -374,7 +377,7 @@ function HomePage() {
           </div>
           <div className="most-popular">
             <div className="most-popular-tab">Most popular plan</div>
-            <div className="pricing-orange-gradient dark">
+            <div className="pricing-orange-gradient mp">
               <p>PERSONAL PRO</p>
               <h4>$5</h4>
               <p>4 QR code types </p>

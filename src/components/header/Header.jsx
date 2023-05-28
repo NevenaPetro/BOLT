@@ -1,35 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { applicationContext } from "../../context";
 import { ReactComponent as BoltLogo } from "../../assets/footer/bolt-logo.svg";
 import ThemeIcon from "../../assets/home/theme-icon.svg";
 import "../header/header.scss";
 
 function Header() {
   const [active, setActive] = useState(false);
+  const { handleClickGenerate, handleClickHome, handleClickPricing } =
+    useContext(applicationContext);
   const menuIcon = "menuIcon";
+
   return (
     <div className="header-wrapper">
-      <Link className="logo" to="/">
+      <Link to='/' className="logo" onClick={handleClickHome}>
         <BoltLogo />
       </Link>
       <div className="menu">
         <nav className={`navigation ${active ? menuIcon : ""}`}>
-          <a
-            href="#generate"
-            onClick={() => {
-              setActive(!active);
-            }}
-          >
+          <Link to='/#generate' onClick={handleClickGenerate}>
             Generate QR Codes
-          </a>
-          <a
-            href="#pricing"
-            onClick={() => {
-              setActive(!active);
-            }}
-          >
+          </Link>
+          <Link to='/#pricing' onClick={handleClickPricing}>
             Pricing
-          </a>
+          </Link>
           <Link
             to="/login"
             onClick={() => {

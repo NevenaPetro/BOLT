@@ -5,12 +5,21 @@
   src: url(./assets/TarabaFont-ExtraBold.woff2);
 }
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Comfortaa", cursive;
+  scroll-padding-top: 145px;
+  @media screen and (max-width: 1024px) {
+    scroll-padding-top: 97px;
+  }
+  @media screen and (max-width: 768px) {
+    scroll-padding-top: 60px;
+  }
 }
+
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
   -ms-overflow-style: none; /* IE and Edge */
