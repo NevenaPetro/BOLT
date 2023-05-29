@@ -3,25 +3,40 @@ import { Link } from "react-router-dom";
 import { applicationContext } from "../../context";
 import { ReactComponent as BoltLogo } from "../../assets/footer/bolt-logo.svg";
 import ThemeIcon from "../../assets/home/theme-icon.svg";
-import "../header/header.scss";
+import "../header/_header.scss";
 
 function Header() {
   const [active, setActive] = useState(false);
-  const { handleClickGenerate, handleClickHome, handleClickPricing } =
-    useContext(applicationContext);
+  const {
+    handleClickGenerate,
+    handleClickHome,
+    handleClickPricing,
+    activDarkMode,
+    setActivDarkMode,
+    handleClick,
+    dark,
+  } = useContext(applicationContext);
   const menuIcon = "menuIcon";
 
   return (
-    <div className="header-wrapper">
-      <Link to='/' className="logo" onClick={handleClickHome}>
-        <BoltLogo />
+    <div className={`header-wrapper ${activDarkMode ? dark : ""}`}>
+      <Link
+        to="/"
+        className={`logo ${activDarkMode ? dark : ""}`}
+        onClick={handleClickHome}
+      >
+        <BoltLogo className={`${activDarkMode ? dark : ""}`} />
       </Link>
       <div className="menu">
-        <nav className={`navigation ${active ? menuIcon : ""}`}>
-          <Link to='/#generate' onClick={handleClickGenerate}>
+        <nav
+          className={`navigation ${active ? menuIcon : ""} ${
+            activDarkMode ? dark : ""
+          }`}
+        >
+          <Link to="/#generate" onClick={handleClickGenerate}>
             Generate QR Codes
           </Link>
-          <Link to='/#pricing' onClick={handleClickPricing}>
+          <Link to="/#pricing" onClick={handleClickPricing}>
             Pricing
           </Link>
           <Link
@@ -43,7 +58,7 @@ function Header() {
           </Link>
         </nav>
         <button className="theme-btn">
-          <img src={ThemeIcon} alt="theme" />
+          <img src={ThemeIcon} alt="theme" onClick={handleClick} />
         </button>
         <div
           className={`hamburger ${active ? menuIcon : ""}`}
@@ -51,8 +66,8 @@ function Header() {
             setActive(!active);
           }}
         >
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <span className={`bar ${activDarkMode ? dark : ""}`}></span>
+          <span className={`bar ${activDarkMode ? dark : ""}`}></span>
         </div>
       </div>
     </div>

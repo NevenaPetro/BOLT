@@ -1,6 +1,6 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { applicationContext } from "../../context";
 import QRCodePurchase from "../../assets/home/qr-code-purchase.png";
 import DynamicIcon from "../../assets/home/static-and-dynamic/dynamic-icon-orange.svg";
 import StaticIcon from "../../assets/home/static-and-dynamic/static-icon-orange.svg";
@@ -18,15 +18,15 @@ import UrlIcon from "../../assets/home/qr code types icons/url-orange.svg";
 import VCardIcon from "../../assets/home/qr code types icons/vcard-orange.svg";
 import WhatsAppIcon from "../../assets/home/qr code types icons/whatsapp-orange.svg";
 import WiFiIcon from "../../assets/home/qr code types icons/wifi-orange.svg";
-import { applicationContext } from "../../context";
+
 import "./mainpage.scss";
 
 function HomePage() {
-  const { handleClickGenerate, handleClickHome, handleClickPricing } =
+  const { handleClickGenerate, activDarkMode, dark } =
     useContext(applicationContext);
   return (
     <>
-      <div id="mainpage-wrapper">
+      <div id="mainpage-wrapper" className={`${activDarkMode ? dark : ""}`}>
         <div>
           <div className="heading">
             <h2>
@@ -37,7 +37,9 @@ function HomePage() {
           </div>
           <div className="big-btns">
             <div className="big-btn">
-              <Link to="/#generate" onClick={handleClickGenerate}>Generate QR Codes</Link>
+              <Link to="/#generate" onClick={handleClickGenerate}>
+                Generate QR Codes
+              </Link>
             </div>
             <div className="big-btn">
               <Link to="/signup">Sign up</Link>
@@ -47,7 +49,7 @@ function HomePage() {
         <img src={QRCodePurchase} alt="image" />
       </div>
 
-      <section id="generate">
+      <section id="generate" className={`${activDarkMode ? dark : ""}`}>
         <div className="generate-wrapper">
           <h4>QR code Generator.</h4>
           <p>
@@ -123,7 +125,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section id="features">
+      <section id="features" className={`${activDarkMode ? dark : ""}`}>
         <h4>With other features.</h4>
         <p>
           From QR code templates to custom domains, Bolt offers you all the
@@ -186,7 +188,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section id="qr-code-types">
+      <section id="qr-code-types" className={`${activDarkMode ? dark : ""}`}>
         <h4>QR code types.</h4>
         <p>
           QR codes can be used for multiple purposes! So here you have a large
@@ -321,7 +323,7 @@ function HomePage() {
           </div>
         </div>
       </section>
-      <section id="pricing">
+      <section id="pricing" className={`${activDarkMode ? dark : ""}`}>
         <div className="pricing-wrapper-one">
           <div>
             <h4>Simple, transparent pricing.</h4>

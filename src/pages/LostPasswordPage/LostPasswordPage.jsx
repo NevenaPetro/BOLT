@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { applicationContext } from "../../context";
 import "../LostPasswordPage/lostpasswordpage.scss";
 import LostPasswordIllustration from "../../assets/log-in/lost-password-illustration.png";
 
 function LostPasswordPage() {
+  const { activDarkMode, dark } =
+  useContext(applicationContext);
   const onSubmit = (e) => {
     e.preventDefault();
   };
   return (
-    <div className="lostpassw-wrapper">
+    <div className={`lostpassw-wrapper ${activDarkMode ? dark : ""}`}>
       <form onSubmit={onSubmit}>
         <h2>Lost password</h2>
         <p>

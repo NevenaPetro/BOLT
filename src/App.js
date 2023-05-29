@@ -1,5 +1,7 @@
-import Header from "./components/header/Header";
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import { ApplicationProvider } from "./context.js";
+import Header from "./components/header/Header";
 import MainPage from "./pages/MainPage/MainPage";
 import LogInPage from "../src/pages/LogInPage/LogInPage";
 import SignUpPage from "../src/pages/SignUpPage/SignUpPage";
@@ -7,10 +9,12 @@ import LostPasswordPage from "../src/pages/LostPasswordPage/LostPasswordPage";
 import ResendActivationPage from "../src/pages/ResendActivationPage/ResendActivationPage";
 import Footer from "./components/footer/Footer";
 
-import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.scss";
 
 function App() {
+  const [activDarkMode, setActivDarkMode] = useState(false);
+  const dark = "dark";
+
   const handleClickGenerate = () => {
     const element = document.getElementById("generate");
 
@@ -35,6 +39,9 @@ function App() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const handleClick = () => {
+    setActivDarkMode(!activDarkMode);
+  };
 
   return (
     <>
@@ -43,6 +50,10 @@ function App() {
           handleClickGenerate,
           handleClickHome,
           handleClickPricing,
+          activDarkMode,
+          setActivDarkMode,
+          handleClick,
+          dark,
         }}
       >
         <Header />

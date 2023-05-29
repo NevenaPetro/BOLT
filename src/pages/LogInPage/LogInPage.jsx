@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { applicationContext } from "../../context";
 import "../LogInPage/loginpage.scss";
 import LogInIllustration from "../../assets/log-in/log-in-illustration.png";
 
 function LogInPage() {
+  const { activDarkMode, dark } =
+  useContext(applicationContext);
   const onSubmit = (e) => {
     e.preventDefault();
   };
   return (
-    <div className="login-wrapper">
+    <div className={`login-wrapper ${activDarkMode ? dark : ""}`}>
       <form onSubmit={onSubmit}>
         <h2>Log in</h2>
         <p>Welcome back to you Bolt account, it's good to see you again! </p>

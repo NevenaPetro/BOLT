@@ -13,10 +13,10 @@ import TechLogo from "../../assets/footer/trb-tech-logo-solid-white (1) 1.svg";
 import YouTubeIcon from "../../assets/footer/you-tube-large.svg";
 
 function Footer() {
-  const { handleClickGenerate, handleClickHome, handleClickPricing } =
+  const { handleClickGenerate, handleClickPricing, activDarkMode, dark } =
     useContext(applicationContext);
   return (
-    <div className="footer-wrapper">
+    <div className={`footer-wrapper ${activDarkMode ? dark : ""}`}>
       <div className="footer-sub-wrapper">
         <div className="footer-sub-sub-wrapper">
           <div>

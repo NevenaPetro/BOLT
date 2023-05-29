@@ -1,4 +1,4 @@
-@import "../../style.scss";
+@import "../../variables.scss";
 
 .footer-wrapper {
   display: flex;
@@ -103,6 +103,45 @@
       }
     }
   }
+}
+
+.footer-wrapper.dark {
+ 
+  background:$black-2;
+  .footer-sub-wrapper {
+    background:$black-3;
+    .footer-sub-sub-wrapper {
+      .social-networks {
+        a {
+          img {
+          }
+        }
+      }
+      .tarabaLogo {
+      }
+      p {
+        color: $grey-5;
+      }
+      h6 {
+        color: $grey-4;
+      }
+      a {
+        color: $orange-3;
+
+        &:hover {
+          color: $grey-5;
+        }
+      }
+      .quick-links {
+        a {
+          color: $grey-5;
+
+          
+        }
+      }
+    }
+  }
+  
 }
 
 @media screen and (max-width: 1024px) {

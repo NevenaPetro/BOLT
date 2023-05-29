@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { applicationContext } from "../../context";
 import SignUpIllustration from "../../assets/sign-up/sign-up-illustration.png";
 import "../SignUpPage/signuppage.scss";
 
 function SignUpPage() {
+  const { activDarkMode, dark } =
+  useContext(applicationContext);
   const onSubmit = (e) => {
     e.preventDefault();
   };
+
   return (
-    <div className="signup-wrapper">
+    <div className={`signup-wrapper ${activDarkMode ? dark : ""}`}>
       <form onSubmit={onSubmit}>
         <h2>Sign up</h2>
         <p>
