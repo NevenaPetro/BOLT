@@ -90,7 +90,11 @@
     }
     .theme-btn {
       img {
-        fill: $grey-4;
+        svg {
+          path {
+            fill:#ffffff ;
+          }
+        }
       }
     }
   }

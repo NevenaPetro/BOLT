@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { applicationContext } from "../../context";
 import SignUpIllustration from "../../assets/sign-up/sign-up-illustration.png";
@@ -10,6 +10,9 @@ function SignUpPage() {
   const onSubmit = (e) => {
     e.preventDefault();
   };
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  });
 
   return (
     <div className={`signup-wrapper ${activDarkMode ? dark : ""}`}>

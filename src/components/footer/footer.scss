@@ -30,6 +30,12 @@
       .tarabaLogo {
         width: 136px;
         height: 26.13px;
+        svg {
+          path {
+            fill:blue ;
+          }
+          
+        }
       }
       p {
         font-weight: 500;

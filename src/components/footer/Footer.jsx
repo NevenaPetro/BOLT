@@ -13,7 +13,7 @@ import TechLogo from "../../assets/footer/trb-tech-logo-solid-white (1) 1.svg";
 import YouTubeIcon from "../../assets/footer/you-tube-large.svg";
 
 function Footer() {
-  const { handleClickGenerate, handleClickPricing, activDarkMode, dark } =
+  const {  activDarkMode, dark } =
     useContext(applicationContext);
   return (
     <div className={`footer-wrapper ${activDarkMode ? dark : ""}`}>
@@ -43,8 +43,8 @@ function Footer() {
         <div className="footer-sub-sub-wrapper">
           <h6>Quick links</h6>
           <div className="quick-links">
-            <Link onClick={handleClickGenerate}>Generate QR codes</Link>
-            <Link onClick={handleClickPricing}>Pricing</Link>
+          <Link to={'/'} state={{ section: 'generate' }}>Generate QR codes</Link>
+          <Link to={'/'} state={{ section: 'pricing' }}>Pricing</Link>
           </div>
           <div>
             <Link>Terms and Conditions</Link>

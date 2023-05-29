@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { applicationContext } from "../../context";
 import QRCodePurchase from "../../assets/home/qr-code-purchase.png";
 import DynamicIcon from "../../assets/home/static-and-dynamic/dynamic-icon-orange.svg";
@@ -22,8 +23,24 @@ import WiFiIcon from "../../assets/home/qr code types icons/wifi-orange.svg";
 import "./mainpage.scss";
 
 function HomePage() {
-  const { handleClickGenerate, activDarkMode, dark } =
+  const {  activDarkMode, dark } =
     useContext(applicationContext);
+  let data = useLocation();
+
+  useEffect(() => {
+    let section = data.state ? data.state.section : null;
+    if (section) {
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  });
+
   return (
     <>
       <div id="mainpage-wrapper" className={`${activDarkMode ? dark : ""}`}>
@@ -37,7 +54,7 @@ function HomePage() {
           </div>
           <div className="big-btns">
             <div className="big-btn">
-              <Link to="/#generate" onClick={handleClickGenerate}>
+            <Link to={'/'} state={{ section: 'generate' }}>
                 Generate QR Codes
               </Link>
             </div>

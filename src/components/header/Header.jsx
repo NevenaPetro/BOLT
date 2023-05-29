@@ -8,9 +8,7 @@ import "../header/_header.scss";
 function Header() {
   const [active, setActive] = useState(false);
   const {
-    handleClickGenerate,
-    handleClickHome,
-    handleClickPricing,
+    
     activDarkMode,
     setActivDarkMode,
     handleClick,
@@ -23,7 +21,7 @@ function Header() {
       <Link
         to="/"
         className={`logo ${activDarkMode ? dark : ""}`}
-        onClick={handleClickHome}
+        
       >
         <BoltLogo className={`${activDarkMode ? dark : ""}`} />
       </Link>
@@ -33,10 +31,14 @@ function Header() {
             activDarkMode ? dark : ""
           }`}
         >
-          <Link to="/#generate" onClick={handleClickGenerate}>
+          <Link to={'/'} state={{ section: 'generate' }} onClick={() => {
+              setActive(!active);
+            }}>
             Generate QR Codes
           </Link>
-          <Link to="/#pricing" onClick={handleClickPricing}>
+          <Link to={'/'} state={{ section: 'pricing' }} onClick={() => {
+              setActive(!active);
+            }}>
             Pricing
           </Link>
           <Link

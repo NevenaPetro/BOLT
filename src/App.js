@@ -15,30 +15,7 @@ function App() {
   const [activDarkMode, setActivDarkMode] = useState(false);
   const dark = "dark";
 
-  const handleClickGenerate = () => {
-    const element = document.getElementById("generate");
-
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  const handleClickHome = () => {
-    const element = document.getElementById("mainpage-wrapper");
-
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-  const handleClickPricing = () => {
-    const element = document.getElementById("pricing");
-
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  
   const handleClick = () => {
     setActivDarkMode(!activDarkMode);
   };
@@ -47,9 +24,7 @@ function App() {
     <>
       <ApplicationProvider
         value={{
-          handleClickGenerate,
-          handleClickHome,
-          handleClickPricing,
+          
           activDarkMode,
           setActivDarkMode,
           handleClick,
