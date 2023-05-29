@@ -1,29 +1,31 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { applicationContext } from "../../context";
-import { ReactComponent as BoltLogo } from "../../assets/footer/bolt-logo.svg";
+import BoltLogo from "../../assets/footer/bolt-logo.svg";
+import BoltLogoDM from "../../assets/footer/bolt-logo-darkmode.svg";
 import ThemeIcon from "../../assets/home/theme-icon.svg";
+import ThemeIconDM from "../../assets/home/theme-icon-darkmode.svg";
 import "../header/_header.scss";
 
 function Header() {
   const [active, setActive] = useState(false);
-  const {
-    
-    activDarkMode,
-    setActivDarkMode,
-    handleClick,
-    dark,
-  } = useContext(applicationContext);
+  const { activDarkMode, setActivDarkMode, handleClick, dark } =
+    useContext(applicationContext);
   const menuIcon = "menuIcon";
 
   return (
     <div className={`header-wrapper ${activDarkMode ? dark : ""}`}>
-      <Link
-        to="/"
-        className={`logo ${activDarkMode ? dark : ""}`}
-        
-      >
-        <BoltLogo className={`${activDarkMode ? dark : ""}`} />
+      <Link to="/" className='logo'>
+        <img
+          src={BoltLogo}
+          alt="logo"
+          className={`lightmode ${activDarkMode ? dark : ""}`}
+        />
+        <img
+          src={BoltLogoDM}
+          alt="logo"
+          className={`darkmode ${activDarkMode ? dark : ""}`}
+        />
       </Link>
       <div className="menu">
         <nav
@@ -31,14 +33,22 @@ function Header() {
             activDarkMode ? dark : ""
           }`}
         >
-          <Link to={'/'} state={{ section: 'generate' }} onClick={() => {
+          <Link
+            to={"/"}
+            state={{ section: "generate" }}
+            onClick={() => {
               setActive(!active);
-            }}>
+            }}
+          >
             Generate QR Codes
           </Link>
-          <Link to={'/'} state={{ section: 'pricing' }} onClick={() => {
+          <Link
+            to={"/"}
+            state={{ section: "pricing" }}
+            onClick={() => {
               setActive(!active);
-            }}>
+            }}
+          >
             Pricing
           </Link>
           <Link
@@ -60,7 +70,18 @@ function Header() {
           </Link>
         </nav>
         <button className="theme-btn">
-          <img src={ThemeIcon} alt="theme" onClick={handleClick} />
+          <img
+            src={ThemeIcon}
+            alt="theme"
+            className="lightmode"
+            onClick={handleClick}
+          />
+          <img
+            src={ThemeIconDM}
+            alt="theme"
+            className="darkmode"
+            onClick={handleClick}
+          />
         </button>
         <div
           className={`hamburger ${active ? menuIcon : ""}`}

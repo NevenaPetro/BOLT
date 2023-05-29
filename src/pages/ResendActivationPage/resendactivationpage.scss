@@ -78,9 +78,11 @@
       }
     }
   }
-  img {
-    width: 505px;
-    height: 505px;
+  img.lightmode {
+    display: block;
+  }
+  img.darkmode {
+    display: none;
   }
 }
 
@@ -99,7 +101,11 @@
       }
     }
   }
-  img {
+  img.lightmode {
+    display: none;
+  }
+  img.darkmode {
+    display: block;
   }
 }
 

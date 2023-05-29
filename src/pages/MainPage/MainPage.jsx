@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { applicationContext } from "../../context";
 import QRCodePurchase from "../../assets/home/qr-code-purchase.png";
+import QRCodePurchaseDM from "../../assets/home/qr-code-purchase-darkmode.png";
 import DynamicIcon from "../../assets/home/static-and-dynamic/dynamic-icon-orange.svg";
 import StaticIcon from "../../assets/home/static-and-dynamic/static-icon-orange.svg";
 import FeaturesIcon from "../../assets/home/features/features-icon-orange.svg";
@@ -63,7 +64,8 @@ function HomePage() {
             </div>
           </div>
         </div>
-        <img src={QRCodePurchase} alt="image" />
+        <img src={QRCodePurchase} alt="image" className="lightmode"/>
+        <img src={QRCodePurchaseDM} alt="image"className="darkmode" />
       </div>
 
       <section id="generate" className={`${activDarkMode ? dark : ""}`}>

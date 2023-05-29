@@ -7,20 +7,22 @@ import InstagramIcon from "../../assets/footer/instagram-large.svg";
 import LinkedinIcon from "../../assets/footer/linked-in-large.svg";
 import OaklyIcon from "../../assets/footer/oakly-logo-full-color 9.svg";
 import TarabaLogo from "../../assets/footer/taraba-logo-latin-full-color-white 1.svg";
+import TarabaLogoDM from "../../assets/footer/taraba-logo-latin-full-color-white 1-darkmode.svg";
 import PortalLogo from "../../assets/footer/portal-logo-lat-solid-white 1.svg";
 import EduLogo from "../../assets/footer/trb-edu-logo-solid-white.svg";
 import TechLogo from "../../assets/footer/trb-tech-logo-solid-white (1) 1.svg";
 import YouTubeIcon from "../../assets/footer/you-tube-large.svg";
 
 function Footer() {
-  const {  activDarkMode, dark } =
+  const { activDarkMode, dark } =
     useContext(applicationContext);
   return (
     <div className={`footer-wrapper ${activDarkMode ? dark : ""}`}>
       <div className="footer-sub-wrapper">
         <div className="footer-sub-sub-wrapper">
           <div>
-            <img src={TarabaLogo} alt="logo" className="tarabaLogo" />
+            <img src={TarabaLogo} alt="logo" className="tarabaLogo lightmode" />
+            <img src={TarabaLogoDM} alt="logo" className="tarabaLogo darkmode" />
             <div className="social-networks">
               <Link>
                 <img src={LinkedinIcon} alt="linkedin" />

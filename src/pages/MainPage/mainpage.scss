@@ -63,9 +63,11 @@
       }
     }
   }
-  img {
-    width: 600px;
-    height: 600px;
+  img.lightmode {
+    display: block;
+  }
+  img.darkmode {
+    display: none;
   }
 }
 #mainpage-wrapper.dark {
@@ -86,8 +88,11 @@
      
     }
   }
-  img {
-    
+  img.lightmode {
+    display: none;
+  }
+  img.darkmode {
+    display: block;
   }
 }
 

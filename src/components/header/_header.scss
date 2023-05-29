@@ -15,7 +15,13 @@
     height: 39px;
     left: 40px;
     top: 50px;
-    svg {
+    img.lightmode {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+    img.darkmode {
+      display: none;
       height: 100%;
       width: 100%;
     }
@@ -62,7 +68,14 @@
       &:hover {
         cursor: pointer;
       }
-      img {
+      
+      img.lightmode {
+        display: block;
+        width: 22px;
+        height: 28px;
+      }
+      img.darkmode {
+        display: none;
         width: 22px;
         height: 28px;
       }
@@ -73,8 +86,13 @@
   background-color: #2d2d2d;
   box-shadow: 0px 1px 16px rgba(255, 120, 0, 0.2);
   .logo {
-    .dark {
-      fill: $grey-4;
+    img.lightmode {
+      display: none;
+     
+    }
+    img.darkmode {
+      display: block;
+      
     }
   }
   .menu {
@@ -89,12 +107,11 @@
       }
     }
     .theme-btn {
-      img {
-        svg {
-          path {
-            fill:#ffffff ;
-          }
-        }
+      img.lightmode {
+        display: none;
+      }
+      img.darkmode {
+        display: block;
       }
     }
   }

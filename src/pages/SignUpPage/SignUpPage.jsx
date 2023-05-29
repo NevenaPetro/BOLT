@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { applicationContext } from "../../context";
 import SignUpIllustration from "../../assets/sign-up/sign-up-illustration.png";
+import SignUpIllustrationDM from "../../assets/sign-up/sign-up-illustration-darkmode.png";
 import "../SignUpPage/signuppage.scss";
 
 function SignUpPage() {
@@ -43,7 +44,8 @@ function SignUpPage() {
           </span>
         </p>
       </form>
-      <img src={SignUpIllustration} alt="illustration" />
+      <img src={SignUpIllustration} alt="illustration" className="lightmode"/>
+      <img src={SignUpIllustrationDM} alt="illustration" className="darkmode"/>
     </div>
   );
 }

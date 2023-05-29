@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { applicationContext } from "../../context";
 import "../LogInPage/loginpage.scss";
 import LogInIllustration from "../../assets/log-in/log-in-illustration.png";
+import LogInIllustrationDM from "../../assets/log-in/log-in-illustration-darkmode.png";
 
 function LogInPage() {
   const { activDarkMode, dark } = useContext(applicationContext);
@@ -43,7 +44,8 @@ function LogInPage() {
           </p>
         </div>
       </form>
-      <img src={LogInIllustration} alt="illustration" />
+      <img src={LogInIllustration} alt="illustration" className="lightmode"/>
+      <img src={LogInIllustrationDM} alt="illustration" className="darkmode"/>
     </div>
   );
 }

@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { applicationContext } from "../../context";
 import "../LostPasswordPage/lostpasswordpage.scss";
 import LostPasswordIllustration from "../../assets/log-in/lost-password-illustration.png";
+import LostPasswordIllustrationDM from "../../assets/log-in/lost-password-illustration-darkmode.png";
 
 function LostPasswordPage() {
   const { activDarkMode, dark } =
   useContext(applicationContext);
+  const [btnTitle, setBtnTitle] = useState ('Send me link');
   const onSubmit = (e) => {
     e.preventDefault();
   };
@@ -21,14 +23,15 @@ function LostPasswordPage() {
         <div className="input-wrapper">
           <input type="email" placeholder="Your email*"></input>
         </div>
-        <button type="submit" className="big-btn">
-          Send me link
+        <button type="submit" className="big-btn" onClick={() => {setBtnTitle('Done!')}}>
+        {btnTitle}
         </button>
         <div className="links">
           <Link to="/login">Return to Login</Link>
         </div>
       </form>
-      <img src={LostPasswordIllustration} alt="illustration" />
+      <img src={LostPasswordIllustration} alt="illustration" className="lightmode"/>
+      <img src={LostPasswordIllustrationDM} alt="illustration" className="darkmode"/>
     </div>
   );
 }

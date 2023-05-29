@@ -112,9 +112,11 @@
       }
     }
   }
-  img {
-    width: 520px;
-    height: 520px;
+  img.lightmode {
+    display: block;
+  }
+  img.darkmode {
+    display: none;
   }
 }
 
@@ -139,7 +141,11 @@
       }
     }
   }
-  img {
+  img.lightmode {
+    display: none;
+  }
+  img.darkmode {
+    display: block;
   }
 }
 

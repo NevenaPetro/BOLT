@@ -114,9 +114,11 @@
       }
     }
   }
-  img {
-    width: 498px;
-    height: 498px;
+  img.lightmode {
+    display: block;
+  }
+  img.darkmode {
+    display: none;
   }
 }
 
@@ -145,7 +147,11 @@
       }
     }
   }
-  img {
+  img.lightmode {
+    display: none;
+  }
+  img.darkmode {
+    display: block;
   }
 }
 

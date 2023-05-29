@@ -15,6 +15,12 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+      img.lightmode {
+        display: block;
+      }
+      img.darkmode {
+        display: none;
+      }
       .social-networks {
         display: flex;
         justify-content: flex-start;
@@ -32,9 +38,8 @@
         height: 26.13px;
         svg {
           path {
-            fill:blue ;
+            fill: blue;
           }
-          
         }
       }
       p {
@@ -112,11 +117,16 @@
 }
 
 .footer-wrapper.dark {
- 
-  background:$black-2;
+  background: $black-2;
   .footer-sub-wrapper {
-    background:$black-3;
+    background: $black-3;
     .footer-sub-sub-wrapper {
+      img.lightmode {
+        display: none;
+      }
+      img.darkmode {
+        display: block;
+      }
       .social-networks {
         a {
           img {
@@ -141,13 +151,10 @@
       .quick-links {
         a {
           color: $grey-5;
-
-          
         }
       }
     }
   }
-  
 }
 
 @media screen and (max-width: 1024px) {
