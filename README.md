@@ -20,16 +20,16 @@ In order to start the app you must follow these steps:
 Clone the repository to your local machine:
 git clone 
 
-2.Navigate to the project directory:
+2. Navigate to the project directory:
 cd 
 
 3. Install the required dependencies:
 npm install
 
-4.Start the development server:
+4. Start the development server:
 npm start 
 
-5.Open your web browser and visit http://localhost:3000 to access the QR code generator web application.
+5. Open your web browser and visit http://localhost:3000 to access the QR code generator web application.
 
 This app is created with React.js. 
 
