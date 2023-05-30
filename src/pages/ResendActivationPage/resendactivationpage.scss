@@ -79,9 +79,13 @@
     }
   }
   img.lightmode {
+    width: 548px;
+    height: 548px;
     display: block;
   }
   img.darkmode {
+    width: 548px;
+    height: 548px;
     display: none;
   }
 }
@@ -106,6 +110,14 @@
   }
   img.darkmode {
     display: block;
+  }
+  @media screen and (max-width: 768px) {
+    img.lightmode {
+      display: none;
+    }
+    img.darkmode {
+      display: none;
+    }
   }
 }
 
@@ -143,7 +155,11 @@
         line-height: 17px;
       }
     }
-    img {
+    img.lightmode {
+      width: 445px;
+      height: 445px;
+    }
+    img.darkmode {
       width: 445px;
       height: 445px;
     }
@@ -162,7 +178,10 @@
         width: 344px;
       }
     }
-    img {
+    img.lightmode {
+      display: none;
+    }
+    img.darkmode {
       display: none;
     }
   }

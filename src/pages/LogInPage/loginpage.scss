@@ -115,9 +115,13 @@
     }
   }
   img.lightmode {
+    width: 498px;
+    height: 498px;
     display: block;
   }
   img.darkmode {
+    width: 498px;
+    height: 498px;
     display: none;
   }
 }
@@ -130,13 +134,30 @@
   }
 
   .checkbox-wrapper {
+    input[type="checkbox"] {
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      background: url("../../assets/sign-up/chech-box-darkmode.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      &:checked {
+        background: url("../../assets/sign-up/validation.svg");
+        background-repeat: no-repeat;
+        background-position: 50%;
+      }
+    }
     .checkbox-label {
       color: $grey-4;
+      svg {
+        fill: #fff;
+      }
     }
   }
-.big-btn {
-  color: $grey-4;
-}
+  .big-btn {
+    color: $grey-4;
+  }
 
   .links {
     .links-sub-wrapper {
@@ -152,6 +173,14 @@
   }
   img.darkmode {
     display: block;
+  }
+  @media screen and (max-width: 768px) {
+    img.lightmode {
+      display: none;
+    }
+    img.darkmode {
+      display: none;
+    }
   }
 }
 
@@ -204,7 +233,11 @@
         }
       }
     }
-    img {
+    img.lightmode {
+      width: 443px;
+      height: 443px;
+    }
+    img.darkmode {
       width: 443px;
       height: 443px;
     }
@@ -233,7 +266,10 @@
         margin: 16px 0 24px 0;
       }
     }
-    img {
+    img.lightmode {
+      display: none;
+    }
+    img.darkmode {
       display: none;
     }
   }

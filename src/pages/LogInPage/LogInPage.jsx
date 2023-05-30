@@ -13,7 +13,7 @@ function LogInPage() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   });
-  
+
   return (
     <div className={`login-wrapper ${activDarkMode ? dark : ""}`}>
       <form onSubmit={onSubmit}>
@@ -44,8 +44,8 @@ function LogInPage() {
           </p>
         </div>
       </form>
-      <img src={LogInIllustration} alt="illustration" className="lightmode"/>
-      <img src={LogInIllustrationDM} alt="illustration" className="darkmode"/>
+      <img src={LogInIllustration} alt="illustration" className="lightmode" />
+      <img src={LogInIllustrationDM} alt="illustration" className="darkmode" />
     </div>
   );
 }
